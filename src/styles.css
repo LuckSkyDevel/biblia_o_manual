@@ -92,6 +92,10 @@ nav {
   color: var(--gold2);
 }
 
+.nav-cta:hover {
+  background: rgba(185, 166, 106, 0.42);
+}
+
 .hero {
   padding: 72px 0 86px;
 }
@@ -166,10 +170,22 @@ h1 em {
   box-shadow: 0 12px 30px rgba(185, 166, 106, 0.16);
 }
 
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--gold), var(--gold2));
+  color: #10202a;
+  box-shadow: 0 12px 30px rgba(185, 166, 106, 0.16);
+}
+
 .btn-secondary {
   border-color: var(--line);
   background: #111;
   color: #f5eee1;
+}
+
+.btn-secondary:hover {
+  background: rgba(185, 166, 106, 0.42);
+  color: var(--gold2);
+  border-color: var(--gold);
 }
 
 .trust {
