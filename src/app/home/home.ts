@@ -3,11 +3,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { ContentCards, type ContentCard } from '../content-cards/content-cards';
 
-import { AnimateOnScrollModule } from 'primeng/animateonscroll';
-
 @Component({
   selector: 'app-home',
-  imports: [ContentCards, FontAwesomeModule, AnimateOnScrollModule],
+  imports: [ContentCards, FontAwesomeModule],
   templateUrl: './home.html',
 })
 export class Home {
