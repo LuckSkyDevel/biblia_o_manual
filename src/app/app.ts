@@ -1,5 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import AOS from 'aos';
 
 @Component({
   imports: [RouterOutlet],
@@ -8,5 +9,16 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('biblia-o-manual');
+  ngOnInit() {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: false,
+      mirror: true,
+    });
+  }
+
+  afterNextRender() {
+    AOS.refresh();
+  }
 }
