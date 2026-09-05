@@ -1,5 +1,4 @@
 import { Component, input } from '@angular/core';
-import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 export interface ContentCard {
   readonly step: string;
@@ -9,7 +8,6 @@ export interface ContentCard {
 
 @Component({
   selector: 'app-content-cards',
-  imports: [AnimateOnScrollModule],
   template: `
     <div [className]="divClass()" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-offset="-150">
       @for (card of cards(); track card.step) {
