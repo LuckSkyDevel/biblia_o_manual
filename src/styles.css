@@ -2,6 +2,25 @@
 
 @import 'tailwindcss';
 
+@theme {
+  --animate-fade-out: fade-out-animate 1s ease-in-out;
+  --animate-fade-in: fade-in-animation 2s ease-in-out;
+  --grid-template-columns: 1fr;
+  --grid-template-columns-md: 1.08fr 0.92fr;
+  --grid-gap: 34px;
+  --grid-gap-md: 64px;
+
+  @keyframes fade-out-animate {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(10px); }
+  }
+
+  @keyframes fade-in-animation {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
 :root {
   --bg: #0c1014;
   --bg2: #11171d;
@@ -100,22 +119,8 @@ nav {
   padding: 72px 0 86px;
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.08fr 0.92fr;
-  gap: 64px;
-  align-items: center;
-}
-
 .eyebrow {
-  display: inline-flex;
-  gap: 8px;
-  align-items: center;
-  color: var(--gold2);
-  font-size: 12px;
-  font-weight: 800;
   letter-spacing: 0.15em;
-  text-transform: uppercase;
   margin-bottom: 18px;
 }
 
@@ -147,17 +152,7 @@ h1 em {
   margin: 0 0 30px;
 }
 
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 52px;
   padding: 0 22px;
   border-radius: 12px;
   font-weight: 900;
@@ -189,12 +184,8 @@ h1 em {
 }
 
 .trust {
-  display: flex;
   gap: 22px;
-  flex-wrap: wrap;
-  margin-top: 26px;
   color: #a9a092;
-  font-size: 13px;
 }
 
 .trust span {
@@ -211,8 +202,6 @@ h1 em {
 }
 
 .visual {
-  position: relative;
-  min-height: 500px;
   border: 1px solid rgba(185, 166, 106, 0.26);
   border-radius: 28px;
   background:
@@ -590,15 +579,6 @@ footer {
 @media (max-width: 850px) {
   .hero {
     padding-top: 40px;
-  }
-
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 34px;
-  }
-
-  .visual {
-    min-height: 390px;
   }
 
   .cards,
